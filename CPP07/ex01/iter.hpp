@@ -4,7 +4,7 @@
 #include <iostream>
 
 template <typename arr, typename func>
-void iter(arr &add, const int size, func temp)
+void iter(arr *add, const int size, func temp)
 {
     for(int i = 0; i < size; i++)
     {
