@@ -2,16 +2,36 @@
 
 int main()
 {
-    Array<int> a(4);
+    try
+    {
 
-    std::cout << a.size() << std::endl;
+        std::cout << "int array test : " << std::endl;
 
-    a[1] = 233;
-    for(size_t t = 0; t < a.size(); t++)
-        std::cout << a[t] << std::endl;
-    
-    Array<int> b(a);
-    for(size_t t = 0; t < b.size(); t++)
-        std::cout << b[t] << std::endl;
+        Array<int> a(4);
 
+        std::cout << "size of arr : " << a.size() << std::endl;
+        for (size_t t = 0; t < a.size(); t++)
+        {
+            a[t] = t;
+            std::cout << a[t] << std::endl;
+        }
+
+        std::cout << "string array test : " << std::endl;
+        Array<std::string> arr(2);
+        arr[0] = "working";
+        arr[1] = "class";
+
+        std::cout << "size of arr : " << arr.size() << std::endl;
+        for (size_t t = 0; t < arr.size(); t++)
+        {
+            std::cout << arr[t] << std::endl;
+        }
+
+        std::cout << "out of bound throw check : " << std::endl;
+        arr[2] = "throwing !";
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
 }

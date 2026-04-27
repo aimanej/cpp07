@@ -15,9 +15,11 @@ private:
 public:
     Array();
     Array(unsigned int n);
-    Array(Array &obj);
-    Array operator=(Array &obj);
+    Array(const Array &obj);
+    Array &operator=(const Array &obj);
+    ~Array();
     T& operator[](size_t elem);
+    const T& operator[](size_t elem) const;
     size_t size() const;
     class IndexOOB : public std::exception
     {

@@ -1,8 +1,8 @@
 #include "iter.hpp"
 
-void func1(int &i)
+void func1(const int &i)
 {
-    i += 1;
+    std::cout << i << std::endl;
 }
 
 void func2(std::string &str)
@@ -19,7 +19,7 @@ void func3(float &i)
 
 int main()
 {
-    int arr[] = {15, 2, 4};
+    const int arr[] = {15, 2, 4};
 
     iter(arr, 3, func1);
 

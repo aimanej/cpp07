@@ -1,6 +1,6 @@
 CC= c++
 
-Flags= -Wall -Wextra -Werror
+Flags= -Wall -Wextra -Werror -std=c++98
 
 Srcs= main.cpp
 
